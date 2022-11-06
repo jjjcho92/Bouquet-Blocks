@@ -1,19 +1,22 @@
-body{
+body {
     background-color: black;
     font-family: 'Roboto', sans-serif;
 }
+
 nav {
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 nav .header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 footer {
     position: fixed;
     bottom: 5px;
@@ -22,27 +25,33 @@ footer {
     justify-content: center;
     align-items: center;
 }
-footer p{
+
+footer p {
     color: rgb(225, 225, 190);
     font-size: 25px;
     font-weight: 700;
 }
-h1{
+
+h1 {
     color: white;
     font-size: 60px;
 }
-nav h1{
+
+nav h1 {
     margin-bottom: 10px;
 }
-p{
+
+p {
     color: white;
     font-size: 25px;
     font-weight: 200;
 }
-nav p{
+
+nav p {
     margin-top: 10px;
 }
-#canvas-container{
+
+#canvas-container {
     width: 70vw;
     height: 70vh;
     position: absolute;
@@ -51,7 +60,9 @@ nav p{
     transform: translate(-50%, -50%);
     margin: 50px 0px;
 }
-.parent-container{
+
+.parent-container {
+    display: block;
     width: 100vw;
     height: 100vh;
     position: absolute;
@@ -72,4 +83,30 @@ nav p{
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-  }
+}
+
+.gallery {
+    width: 70vw;
+}
+
+.gallery img {
+    height: 70vh;
+    width: 70vw;
+}
+
+.page1 {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.page2 {
+    width: 100vw;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

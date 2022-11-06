@@ -95,34 +95,35 @@ class Rectangle {
 
 const submit = document.querySelector(".button");
 
-submit.addEventListener("click", function(){
+submit.addEventListener("click", function () {
 	// capture canvas (1. refer to canvas in HTML, 2. captures image in form of text 3. storing as a value in obj)
 	const capture = document.querySelector("canvas")
 	const imageData = capture.toDataURL("image/jpeg")
-	let obj = {image:imageData} 
+	let obj = { image: imageData }
 	// console.log (imageData)
 	// send to server (1. post data to a webpage 2. sending body (as JSON) 3. turning into JSON string)
 	fetch("/submit", {
-		method:"POST",
+		method: "POST",
 		headers: {
 			"Content-Type": "application/json;charset=utf-8",
 		},
-		body:JSON.stringify (obj),
-	}).then((response) => response.json)
-		.then((data)=> {
-		// console.log(data)
+		body: JSON.stringify(obj),
 	})
-	// store in database
-})
-
-const display = document.querySelector(".display");
-display.addEventListener("click", function(){
-	fetch("/gallery").then((response) => response.json())
-	.then((data) => {
-		// console.log(data.data[0].image)
-		const gallery = document.querySelector(".container");
-		const imageElem = document.createElement("img")
-		imageElem.src = data.data[0].image
-		gallery.appendChild (imageElem)
-	}) 
+		.then((response) => response.json)
+		.then((data) => {
+			fetch("/gallery")
+				.then((response) => response.json())
+				.then((data) => {
+					const gallery = document.querySelector(".gallery");
+					const p1 = document.querySelector(".page1")
+					const p2 = document.querySelector(".page2")
+					p1.style.display = "none"
+					p2.style.display = "flex"
+					for (let i = 0; i < data.data.length; i++) {
+						const imageElem = document.createElement("img")
+						imageElem.src = data.data[i].image
+						gallery.appendChild(imageElem)
+					}
+				})
+		})
 })
