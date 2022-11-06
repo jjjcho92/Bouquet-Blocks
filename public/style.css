@@ -16,7 +16,7 @@ nav .header {
 }
 footer {
     position: fixed;
-    bottom: 100px;
+    bottom: 5px;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -49,6 +49,7 @@ nav p{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    margin: 50px 0px;
 }
 .parent-container{
     width: 100vw;
@@ -56,4 +57,19 @@ nav p{
     position: absolute;
     top: 0;
     left: 0;
+    margin-bottom: 50px;
+
 }
+
+.button {
+    background-color: #dde9de;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }

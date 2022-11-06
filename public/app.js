@@ -4,9 +4,8 @@ const container = document.querySelector("#canvas-container");
 // console.log(container.clientWidth);
 
 
-//I switched to another Draggble Example: https://editor.p5js.org/enickles/sketches/HJoISR_WM 
+//I take out the circles for now as I'm not able to make it work. Working on p5 editor seperately: https://editor.p5js.org/jjjcho92/sketches/6mcrYaJrw 
 let rectangles = [];
-let circles = [];
 
 function setup() {
 	//Create the canvas and save it to a variable;
@@ -21,13 +20,6 @@ function setup() {
 		let h = random(40, 80);
 		rectangles[i] = new Rectangle(x, y, w, h);
 	}
-
-	for (let i = 0; i < 6; i++) {
-		let x = random(width);
-		let y = random(height);
-		let d = random(40, 80);
-		circles[i] = new Circle(x, y, d);
-	}
 }
 
 function draw() {
@@ -35,10 +27,6 @@ function draw() {
 
 	for (i = 0; i < rectangles.length; i++) {
 		rectangles[i].show(mouseX, mouseY);
-	}
-
-	for (i = 0; i < circles.length; i++) {
-		circles[i].show(mouseX, mouseY);
 	}
 }
 
@@ -54,9 +42,6 @@ function mousePressed() {
 		rectangles[i].pressed(mouseX, mouseY);
 	}
 
-	for (i = 0; i < circles.length; i++) {
-		circles[i].pressed(mouseX, mouseY);
-	}
 }
 
 function mouseReleased() {
@@ -64,9 +49,6 @@ function mouseReleased() {
 		rectangles[i].notPressed();
 	}
 
-	for (i = 0; i < circles.length; i++) {
-		circles[i].notPressed();
-	}
 }
 
 function windowResized() {
@@ -97,41 +79,6 @@ class Rectangle {
 		noStroke();
 		fill(252, 186, 3);
 		rect(this.x, this.y, this.w, this.h);
-	}
-
-	pressed(px, py) {
-		if (px > this.x && px < this.x + this.w && py > this.y && py < this.y + this.h) {
-			// print("clicked on rect");
-			this.dragging = true;
-			this.offsetX = this.x - px;
-			this.offsetY = this.y - py;
-		}
-	}
-	notPressed() {
-		this.dragging = false;
-	}
-}
-
-class Circle {
-	constructor(x, y, d) {
-		this.x = x;
-		this.y = y;
-		this.d = d;
-		this.offsetX = 0;
-		this.offsetY = 0;
-		this.dragging = false;
-		this.rollover = false;
-	}
-
-	show(px, py) {
-		if (this.dragging) {
-			this.x = px + this.offsetX;
-			this.y = py + this.offsetY;
-		}
-
-		noStroke();
-		fill(0, 173, 46);
-		circle(this.x, this.y, this.d);
 	}
 
 	pressed(px, py) {
