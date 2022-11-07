@@ -1,6 +1,6 @@
-const express = require("express")
-const app = express()
-const port = 3000
+let express = require('express');
+let app = express();
+// const port = 3000
 // installed npm i nedb (this gives you the .db file)
 // reference module
 const DataStore = require("nedb")
@@ -31,6 +31,11 @@ app.get("/gallery", (req, res) => {
     })
 })
 
-app.listen(port, function () {
-    console.log("listening on port 3000")
-})
+// app.listen(port, function () {
+//     console.log("listening on port 3000")
+// })
+
+let port = process.env.PORT || 3000;
+app.listen(port, ()=> {
+console.log('listening at ', port);
+});
