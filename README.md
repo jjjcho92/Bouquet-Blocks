@@ -3,7 +3,7 @@
 Connections Lab Project 2: Bouquet Blocks w/ Kat 
 
 
-## Link to the project: 
+## Links to the project: 
 - Github Repo (Kat's):  https://github.com/KatJPark/Bouquet-Blocks 
 - Glitch Site: https://sheer-alpine-dill.glitch.me/
 - Glitch Editor Link: https://glitch.com/edit/#!/sheer-alpine-dill 
