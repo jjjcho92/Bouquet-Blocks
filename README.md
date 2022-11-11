@@ -25,6 +25,7 @@ Connections Lab Project 2: Bouquet Blocks w/ Kat
 - I had an unplanned surgery, so I had to miss the class during the first project presentation. It was also uncertain if I would be recovered enough over the weekend to work on the project. 
 - There's also a huge time zone difference between Kat and I. 
 - Turned out I was able to work on the project despite the pain of the surgery recovery. However, it was also only possible and smooth becasue Kat did such an amazing job in setting up the flow of the project. With the wireframe she created, I was able to follow the idea easily while working on p5. And with constant communcation via Discord and Text messages, Kat and I were able to divide the work quite well. 
+- I wasn't sure how to work on the same codes together without conflict at first. Elizebeth's Flyby really came in handy! I'm now much less afraid about pull requests, and even found it fun!
 - When I encountered challenge in p5...I also messaged my ex-bf for help lol He's a js maniac, who just loves solving js problems for people. He even helped Siri, who is a total strange to him, during the create-a-thon lol So, also thanks to my ex's generosity and speedy response rate. 
 
 
