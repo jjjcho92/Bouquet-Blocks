@@ -36,6 +36,7 @@ Connections Lab Project 2: Bouquet Blocks w/ Kat
 - Figure out how to show the gallery in grid
 - Also figure out how to not have the gallery full with repetitive images
 - add music
+- I'm not sure I fully understand how the db works yet (since Kat did all the heavy lyfting on that part), will probably have to rewatch the videos to learn how to do all that again. 
 
 ## Any relevant references/resources
 - p5 Draggable Sample Code provided by Nun: https://editor.p5js.org/icm/sketches/BkRHbimhm
